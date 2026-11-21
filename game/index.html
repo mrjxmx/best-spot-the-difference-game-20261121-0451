@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Second Glance — a spot the difference game</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="brand-mark" aria-hidden="true">◐</span>
+    <span class="brand-name">Second&nbsp;Glance</span>
+  </div>
+  <div class="level-chip" id="levelChip">Level 1 · Harbour Morning</div>
+  <div class="counter-chip" id="counterChip">5 differences to find</div>
+  <div class="timer-wrap" title="Time left">
+    <div class="timer-text" id="timerText">2:30</div>
+    <div class="timer-track"><div class="timer-bar" id="timerBar"></div></div>
+  </div>
+  <button class="tool-btn" id="hintBtn" type="button">Hint (<span id="hintCount">2</span>)</button>
+  <button class="tool-btn" id="restartBtn" type="button">Restart</button>
+</header>
+
+<main class="stage" id="stage">
+  <figure class="panel-wrap" id="wrapA">
+    <figcaption class="panel-tag">The original</figcaption>
+    <svg id="panelA" viewBox="0 0 600 500" role="img" aria-label="Original picture"></svg>
+  </figure>
+  <figure class="panel-wrap" id="wrapB">
+    <figcaption class="panel-tag">Spot the changes</figcaption>
+    <svg id="panelB" viewBox="0 0 600 500" role="img" aria-label="Changed picture"></svg>
+  </figure>
+</main>
+
+<p class="message" id="message">Click a difference in either picture. Keys: H hint · R restart · N next level.</p>
+
+<div class="overlay" id="overlay">
+  <div class="card" id="overlayCard"></div>
+</div>
+
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
